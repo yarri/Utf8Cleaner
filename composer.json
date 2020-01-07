@@ -2,7 +2,7 @@
         "name": "yarri/utf8-cleaner",
         "type": "library",
         "description": "Removes invalid UTF-8 characters from the given text",
-        "keywords": ["utf-8","utf8","cleaner","clean","glitch","glitches","remover"],
+        "keywords": ["utf-8","utf8","cleaner","clean","glitch","glitches","remover","fix"],
         "homepage": "https://github.com/yarri/Utf8Cleaner",
         "license": ["MIT"],
         "authors": [
