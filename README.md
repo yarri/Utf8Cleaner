@@ -10,7 +10,7 @@ Usage
 
     $text = \Yarri\Utf8Cleaner::Clean($text);
 
-By default, each invalid character is replacing with underscore symbol.
+By default, each invalid character is replaced with underscore symbol.
 
 The default replacement can be overridden by an option.
 
