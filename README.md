@@ -3,20 +3,32 @@ Utf8Cleaner
 
 [![Build Status](https://travis-ci.org/yarri/Utf8Cleaner.svg?branch=master)](https://travis-ci.org/yarri/Utf8Cleaner)
 
-Removes invalid UTF-8 characters from the given text.
+Removes invalid UTF-8 byte sequences from the given text.
+
+Utf8Cleaner is inspired by https://stackoverflow.com/questions/1401317/remove-non-utf8-characters-from-string
 
 Usage
 -----
 
-    $text = \Yarri\Utf8Cleaner::Clean($text);
+Consider you have a string with an illegal UTF-8 byte sequence.
 
-By default, each invalid character is replaced with underscore symbol.
+    $invalid_char = chr(200);
+    $malformed_text = "Příliš žluťoučk$invalid_char kůň";
+    echo $malformed_text; // "Příliš žluťoučk� kůň"
+
+    $text = \Yarri\Utf8Cleaner::Clean($malformed_text);
+
+By default, each invalid byte sequence is replaced with underscore symbol.
+
+    echo $text; // "Příliš žluťoučk_ kůň"
 
 The default replacement can be overridden by an option.
 
-    $text = \Yarri\Utf8Cleaner::Clean($text,["replacement" => "▒"]);
+    $text = \Yarri\Utf8Cleaner::Clean($malformed_text,["replacement" => "?"]);
     // or
-    $text = \Yarri\Utf8Cleaner::Clean($text,"▒");
+    $text = \Yarri\Utf8Cleaner::Clean($malformed_text,"?");
+
+    echo $text; // "Příliš žluťoučk? kůň"
 
 Installation
 ------------
