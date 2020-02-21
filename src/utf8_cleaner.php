@@ -9,7 +9,7 @@ class Utf8Cleaner {
 		}
 
 		$options += array(
-			"replacement" => "_",
+			"replacement" => "�", // U+FFFD REPLACEMENT CHARACTER used to replace an unknown, unrecognized or unrepresentable character
 		);
 
 		$replacement = $options["replacement"];

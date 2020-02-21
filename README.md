@@ -12,15 +12,14 @@ Usage
 
 Consider you have a string with an illegal UTF-8 byte sequence.
 
-    $invalid_char = chr(200);
+    $invalid_char = chr(200).chr(200); // invalid byte sequence for UTF-8
     $malformed_text = "Příliš žluťoučk$invalid_char kůň";
-    echo $malformed_text; // "Příliš žluťoučk� kůň"
 
     $text = \Yarri\Utf8Cleaner::Clean($malformed_text);
 
-By default, each invalid byte sequence is replaced with underscore symbol.
+By default, each invalid byte sequence is replaced with � (i.e. a black diamond with a white question mark - REPLACEMENT CHARACTER used to replace an unknown, unrecognized or unrepresentable character, U+FFFD).
 
-    echo $text; // "Příliš žluťoučk_ kůň"
+    echo $text; // "Příliš žluťoučk� kůň"
 
 The default replacement can be overridden by an option.
 
