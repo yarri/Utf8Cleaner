@@ -32,7 +32,7 @@ The default replacement can be overridden by an option.
 Installation
 ------------
 
-The best way how to install Utf8Cleaner is to use a Composer:
+The best way how to install Utf8Cleaner is to use the Composer:
 
     composer require yarri/utf8-cleaner
 
