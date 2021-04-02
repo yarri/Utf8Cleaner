@@ -1,7 +1,7 @@
 Utf8Cleaner
 ===========
 
-[![Build Status](https://travis-ci.org/yarri/Utf8Cleaner.svg?branch=master)](https://travis-ci.org/yarri/Utf8Cleaner)
+[![Build Status](https://travis-ci.com/yarri/Utf8Cleaner.svg?branch=master)](https://travis-ci.com/yarri/Utf8Cleaner)
 
 Removes invalid UTF-8 byte sequences from the given text.
 
